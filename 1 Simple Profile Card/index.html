@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="card" onclick="toggleCard()">
+        <img src="profiles.jpg" alt="Profile Picture" class="profile-pic" onclick="zoomImage(event)">
+        <h2 class ="name">Prachi Tadse</h2>
+        <p class="designation">Web Developer</p>
+        <p class="bio">Passionate about creating interactive applications and experiences on the web.</p>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Toggle expand on card click
+        function toggleCard() {
+            document.querySelector('.card').classList.toggle('expanded');
+        }
+
+        // Zoom profile picture on click
+        function zoomImage(event) {
+            event.stopPropagation(); // Prevents card expansion when clicking image
+            event.target.classList.toggle('zoom');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* Apply Instagram Gradient Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    font-family: Arial, sans-serif;
+}
+
+/* Profile Card */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.card:hover {
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid white;
+    transition: transform 0.5s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Name & Designation */
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.name:active {
+    opacity: 0;
+}
+
+.designation {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Bio */
+.bio {
+    font-size: 14px;
+    color: white;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: yellow;
+}
